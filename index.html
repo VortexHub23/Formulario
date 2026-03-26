@@ -1,12 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Pesquisa</h1>
+    </header>
+    <section>
+      <form action="" method="get">
+        <fieldset>
+            <legend>DadosPessoais</legend>
+        <label for="UserName">Nome</label>
+        <input type="text" name="userName" placeholder="insira seu nome" required />
+        <br>
+        <label for="age">Idade</label>
+        <input type="number" id="age" min="12" max="100" placeholder="12-100" required>
+        <br>
+        <label for="birthDate">Data de nascimento</label>
+        <input type="date" id="birthdate">
+        <br>
+        <label for="email">email</label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="userPhone">Telefone</label>
+        <input type="tel" id="userPhone" pattern="[0-9]{11}" placeholder="DDD+numero">
+        <br>
+        <label for="img">Upload de foto</label>
+        <input type="file" accept="image/*">
+        <br></fieldset>
+        
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </body>
 </html>
