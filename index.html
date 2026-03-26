@@ -14,14 +14,14 @@
       <form action="" method="get">
         <fieldset>
             <legend>DadosPessoais</legend>
-        <label for="UserName">Nome</label>
-        <input type="text" name="userName" placeholder="insira seu nome" required />
+        <label for="name">Nome</label>
+        <input type="text" id="name" placeholder="insira seu nome" required />
         <br>
         <label for="age">Idade</label>
         <input type="number" id="age" min="12" max="100" placeholder="12-100" required>
         <br>
         <label for="birthDate">Data de nascimento</label>
-        <input type="date" id="birthdate">
+        <input type="date" id="birthDate">
         <br>
         <label for="email">email</label>
         <input type="email" id="email" required>
@@ -30,21 +30,21 @@
         <input type="tel" id="userPhone" pattern="[0-9]{11}" placeholder="DDD+numero">
         <br>
         <label for="img">Upload de foto</label>
-        <input type="file" accept="image/*">
+        <input type="file" id="img" accept="image/*">
         <br></fieldset>
         
         <fieldset>
           <legend>Perfil</legend>
           <p>Genero</p>
-          <input type="radio" name="Usergender" value="Masculino">
-          <label for="Usergender">Mascuino</label>
-          <input type="radio" name="Usergender" value="Feminino">
-          <label for="Usegender">Feminino</label>
-          <input type="radio" name="Usergender" value="notinformed">
-          <label for="Usegender">Prefiro nao informar</label>
+          <input type="radio" id="mas" name="Usergender" value="Masculino">
+          <label for="mas">Masculino</label>
+          <input type="radio" id="fem" name="Usergender" value="Feminino">
+          <label for="fem">Feminino</label>
+          <input type="radio" id="pni" name="Usergender" value="notinformed">
+          <label for="pni">Prefiro nao informar</label>
           <br>
-          <label for="MaritalStatus">Estado civil</label>
-           <select name="MaritalStatus">
+          <label for="ms">Estado civil</label>
+           <select id="ms" name="MaritalStatus">
             <option value="notinformed">Selecione...</option>
             <option value="Casado">Casado</option>
             <option value="Solteiro">Solteiro</option>
@@ -52,8 +52,8 @@
             <option value="Uniaoestavel">União estavel</option>
            </select>
            <br>
-             <Label for="UserState">Estado</Label>
-             <select name="Estate">
+             <Label for="Estate">Estado</Label>
+             <select id="Estate" name="Estate">
                 <option value="Estate">Acre</option>
                 <option value="Estate">Alagoas</option>
                 <option value="Estate">Amapá</option>
@@ -83,11 +83,38 @@
                 <option value="Estate">Tocantins</option>
              </select>
              <br>
-             <label for="City">Cidade</label>
-             <input type="text" required>
-        
-        
+             <label for="City">Cidade:</label>
+            <input id="City" type="text" id="userCity" name="userCity" autocomplete="address-level2" placeholder="Ex.: Fortaleza" />
         </fieldset>
+           
+        <fieldset>
+           <legend>Gostos pessoais</legend>
+           <p>Redes Sociais</p>
+           <input id="instagram" type="checkbox" name="social" value="instagram">
+           <label for="instagram">instagram</label>
+           <br>
+           <input id="Facebook" type="checkbox" name="social" value="Facebook">
+           <label for="Facebook">Facebook</label>
+           <br>
+           <input id="Linkedin" type="checkbox" name="social" value="Linkedin">
+           <label for="Linkedin">Linkedin</label>
+            <br>
+            <input id="X" type="checkbox" name="social" value="X">
+           <label for="X">X</label>
+           <br>
+           <label for="musicStyle">Estilo musical</label>
+           <input list="styleTypes"id="musicStyle" type="text">
+           <datalist id="styleTypes">
+            <option value="Rock">
+            <option value="Samba">
+            <option value="Funk">
+            <option value="Sertanejo">
+           </datalist>
+           <br>
+           <label for="color">Cor favorita</label>
+           <input type="color" id="color">
+        </fieldset>
+
         
         <button type="submit">Enviar</button>
       </form>
