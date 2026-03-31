@@ -93,3 +93,12 @@ button[type="reset"]:hover {
 a {
   text-decoration: none;
 }
+input[type="tel"]
+input[type="file"]{
+margin-bottom: 0;
+
+}
+small{
+    margin-bottom: 20px;
+    display: inline-block;
+}
