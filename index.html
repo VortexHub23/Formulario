@@ -47,10 +47,13 @@
               id="userPhone"
               pattern="[0-9]{11}"
               placeholder="DDD+numero"
+              aria-describedby="phonehelp"
             />
+            <small id="phonehelp">preencha com 11 digitos no seguinte formato:DDD + numero sem espaços ou hifen.</small>
             <br />
             <label for="img">Upload de foto</label>
-            <input type="file" id="img" accept="image/*" />
+            <input type="file" id="img" accept="image/*" aria-describedby="imagehelp"/>
+            <small id="imagehelp">Envie uma foto</small>
             <br />
           </fieldset>
 
@@ -205,8 +208,8 @@
             />
             <label for="aceitoemail">Aceito receber email</label>
           </fieldset>
-          <button type="submit">Enviar</button>
-          <button type="reset">Limpar</button>
+          <button type="submit" aria-label="enviar dados do formulario">Enviar</button>
+          <button type="reset" aria-label="limpar dados do formulario">Limpar</button>
         </form>
       </section>
     </main>
